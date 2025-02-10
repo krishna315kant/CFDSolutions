@@ -5,49 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My CFD Research Page</title>
     <style>
+        /* General Style */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
             text-align: center;
         }
-        header {
-            background-color: #4CAF50;
+        nav a {
+            margin: 0 15px;
             color: white;
-            padding: 10px 0;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
         main {
-            padding: 20px;
+            padding: 40px;
         }
         footer {
             background-color: #333;
             color: white;
             padding: 10px 0;
-            position: absolute;
+            text-align: center;
+            position: fixed;
             width: 100%;
             bottom: 0;
         }
+
+        /* Section Style */
+        section {
+            margin: 30px 0;
+        }
+
+        section h2 {
+            color: #4CAF50;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header Section -->
     <header>
         <h1>Welcome to My CFD Research Website</h1>
         <p>Exploring computational fluid dynamics and its applications.</p>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <section>
+        <!-- About Section -->
+        <section id="about">
             <h2>About Me</h2>
             <p>I'm K. Kant, a researcher in the field of CFD. I specialize in non-equilibrium flash boiling and multiphase flow simulations.</p>
         </section>
-        <section>
+
+        <!-- Research Section -->
+        <section id="research">
             <h2>My Research</h2>
             <p>My current work focuses on developing accurate multiphase flow solvers for industrial applications. I aim to collaborate with others working on similar topics.</p>
         </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>Coming soon! I will list my research papers and publications here.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to collaborate or learn more about my work, feel free to reach out!</p>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 K. Kant | All rights reserved.</p>
     </footer>
+
 </body>
 </html>
-
