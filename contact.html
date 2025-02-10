@@ -3,119 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>Contact | Your Research Website</title>
     
-    <!-- Color Scheme -->
-    <style>
-        /* Color Scheme */
-        :root {
-            --primary-color: #4CAF50;   /* Green */
-            --secondary-color: #333;     /* Dark Grey */
-            --accent-color: #f4f4f4;     /* Light Grey */
-            --text-color: #fff;          /* White for text */
-        }
-
-        body {
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
-            font-family: 'Roboto', sans-serif;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            text-align: center;
-            padding: 60px 0;
-        }
-
-        nav a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            padding: 8px 16px;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: var(--text-color);
-        }
-
-        footer a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Oval Buttons */
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 10px 20px;
-    border-radius: 25px; /* Oval shape */
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth size change */
-}
-
-button:hover {
-    transform: scale(1.1); /* Slightly increase the button size */
-}
-
-button:focus {
-    outline: none; /* Remove outline on click */
-}
-
-/* Button for each section */
-.nav-button {
-    margin: 10px;
-    text-align: center;
-}
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="services.html">Services</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- Contact Information -->
     <header>
-        <h1>Contact Me</h1>
+        <h1>Contact Information</h1>
+        <nav>
+            <a href="#home"><button class="nav-button">Home</button></a>
+            <a href="#research"><button class="nav-button">Research</button></a>
+            <a href="#teaching"><button class="nav-button">Teaching</button></a>
+            <a href="#services"><button class="nav-button">Services</button></a>
+            <a href="#publications"><button class="nav-button">Publications</button></a>
+            <a href="#contact"><button class="nav-button">Contact</button></a>
+        </nav>
     </header>
-    <main>
-        <div class="contact-info">
-            <h2>Get in Touch</h2>
-            <p>If you are interested in collaborating or have any questions, feel free to contact me at:</p>
-            
-            <p><strong>Office Address:</strong></p>
-            <p>123 CFD Research Road, Suite 456,<br>
-            City, Country, 12345</p>
 
-            <p><strong>Email:</strong> <a href="mailto:kkant@example.com">kkant@example.com</a></p>
-            <p><strong>Phone:</strong> +1 234 567 890</p>
-        </div>
-    </main>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Feel free to reach out to me through the contact form below or via email.</p>
+    </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 K. Kant | All rights reserved.</p>
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
