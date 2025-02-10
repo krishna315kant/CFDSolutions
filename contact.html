@@ -3,71 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | CFD Research</title>
+    <title>Your Website</title>
+    
+    <!-- Color Scheme -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
+        /* Color Scheme */
+        :root {
+            --primary-color: #4CAF50;   /* Green */
+            --secondary-color: #333;     /* Dark Grey */
+            --accent-color: #f4f4f4;     /* Light Grey */
+            --text-color: #fff;          /* White for text */
         }
 
-        /* Navigation Bar */
-        nav {
-            background-color: #4CAF50;
-            padding: 10px;
+        body {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
             text-align: center;
+            padding: 60px 0;
         }
+
         nav a {
-            margin: 0 15px;
-            color: white;
-            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 8px 16px;
         }
+
         nav a:hover {
+            color: var(--primary-color);
             text-decoration: underline;
         }
 
-        /* Main Content */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        main {
-            padding: 40px;
-        }
         footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 20px;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
 
-        /* Contact Information */
-        .contact-info {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+        footer a {
+            color: var(--text-color);
         }
-        .contact-info h2 {
-            color: #4CAF50;
+
+        footer a:hover {
+            color: var(--secondary-color);
         }
-        .contact-info p {
-            font-size: 1.1em;
-        }
+
+        /* Oval Buttons */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 25px; /* Oval shape */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth size change */
+}
+
+button:hover {
+    transform: scale(1.1); /* Slightly increase the button size */
+}
+
+button:focus {
+    outline: none; /* Remove outline on click */
+}
+
+/* Button for each section */
+.nav-button {
+    margin: 10px;
+    text-align: center;
+}
+
     </style>
 </head>
 <body>
