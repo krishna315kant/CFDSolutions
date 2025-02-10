@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    
+    <title>Your Research Website</title>
+
     <!-- Color Scheme -->
     <style>
         /* Color Scheme */
         :root {
-            --primary-color: #4CAF50;   /* Green */
-            --secondary-color: #333;     /* Dark Grey */
-            --accent-color: #f4f4f4;     /* Light Grey */
-            --text-color: #fff;          /* White for text */
+            --primary-color: #4CAF50;   
+            --secondary-color: #333;
+            --accent-color: #f4f4f4;
+            --text-color: #fff;
         }
 
         body {
             background-color: var(--accent-color);
             color: var(--secondary-color);
             font-family: 'Roboto', sans-serif;
+            margin: 0;
         }
 
         header {
@@ -55,62 +56,53 @@
         }
 
         /* Oval Buttons */
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 10px 20px;
-    border-radius: 25px; /* Oval shape */
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth size change */
-}
+        button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
 
-button:hover {
-    transform: scale(1.1); /* Slightly increase the button size */
-}
+        button:hover {
+            transform: scale(1.1);
+        }
 
-button:focus {
-    outline: none; /* Remove outline on click */
-}
+        button:focus {
+            outline: none;
+        }
 
-/* Button for each section */
-.nav-button {
-    margin: 10px;
-    text-align: center;
-}
-
+        /* Button for each section */
+        .nav-button {
+            margin: 10px;
+            text-align: center;
+        }
     </style>
 </head>
-
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="services.html">Services</a>
-        <a href="publications.html">Publications</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <!-- Header Section -->
     <header>
-        <h1>Welcome to My CFD Research Website</h1>
-        <p>Exploring computational fluid dynamics and its applications.</p>
+        <h1>Welcome to My Research Website</h1>
+        <nav>
+            <a href="#home"><button class="nav-button">Home</button></a>
+            <a href="#research"><button class="nav-button">Research</button></a>
+            <a href="#teaching"><button class="nav-button">Teaching</button></a>
+            <a href="#services"><button class="nav-button">Services</button></a>
+            <a href="#publications"><button class="nav-button">Publications</button></a>
+            <a href="#contact"><button class="nav-button">Contact</button></a>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <h2>About Me</h2>
-        <p>I am K. Kant, a researcher specializing in computational fluid dynamics (CFD). This website highlights my research, teaching, services, and more.</p>
-    </main>
+    <section id="home">
+        <h2>Welcome to My Research in CFD</h2>
+        <p>This website showcases my research, teaching, services, and more.</p>
+        <a href="#research"><button class="nav-button">Learn About Research</button></a>
+    </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 K. Kant | All rights reserved.</p>
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
