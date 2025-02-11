@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
+    <title>Dr. Krishna Kant - Research</title>
     <style>
         /* General Styles */
         body {
@@ -12,10 +12,10 @@
             padding: 0;
             box-sizing: border-box;
             background-color: lightblue;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-        header, footer {
+        header {
             background-color: #333;
             color: white;
             text-align: center;
@@ -45,56 +45,101 @@
             background-color: #575757;
         }
 
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 80vh;
+            scroll-margin-top: 60px; /* Prevents header overlap */
+        }
+
+        .section-button {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .section-button:hover {
+            background-color: #005f73;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Research Page Layout */
         .container {
             display: flex;
-            min-height: 80vh;
-            padding: 20px;
+            margin-top: 60px; /* Push content below header */
         }
 
         /* Sidebar Styles */
         .sidebar {
             width: 250px;
-            background-color: #fff;
+            background-color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
-            height: fit-content;
+            height: auto;
+            top: 0;
+            left: 0;
+            overflow: hidden; /* No scrollbar */
         }
 
         .sidebar a {
             display: block;
+            color: white;
             text-decoration: none;
-            padding: 15px;
             font-size: 16px;
             text-align: center;
             border-radius: 50px;
-            background-color: #008CBA;
-            color: white;
             transition: 0.3s;
-            margin: 10px 0;
+            background-color: #008CBA;
+            padding: 15px;
+            margin-bottom: 10px;
         }
 
         .sidebar a:hover {
             background-color: #005f73;
-            transform: scale(1.05);
         }
 
         /* Main Content */
         .content {
-            flex-grow: 1;
+            margin-left: 270px;
             padding: 20px;
+            flex-grow: 1;
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-left: 20px;
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Research</h1>
+    <h1>Welcome to My Portal</h1>
 </header>
 
 <nav>
@@ -109,10 +154,10 @@
 <div class="container">
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
-        <a href="#solver-development">Solver Development</a>
-        <a href="#atomization">Atomization</a>
-        <a href="#flash-boiling">Flash Boiling</a>
-        <a href="#quantum-computing">Quantum Computing</a>
+        <a href="#solver-development" class="section-button">Solver Development</a>
+        <a href="#atomization" class="section-button">Atomization</a>
+        <a href="#flash-boiling" class="section-button">Flash Boiling</a>
+        <a href="#quantum-computing" class="section-button">Quantum Computing</a>
     </nav>
 
     <!-- Main Research Content -->
@@ -139,9 +184,20 @@
     </div>
 </div>
 
+<script>
+    // Smooth scrolling when clicking sidebar links
+    document.querySelectorAll('.sidebar a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
 <footer>
     <p>&copy; 2025 Krishna Kant | All Rights Reserved</p>
 </footer>
-
+    
 </body>
 </html>
