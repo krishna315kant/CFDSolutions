@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Dr. Krishna Kant</title>
+    <title>Dr. Krishna Kant - Research</title>
     <style>
         /* General Styles */
         body {
@@ -26,6 +26,64 @@
             margin: 0;
         }
 
+        /* Original Part*/
+nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 80vh;
+            scroll-margin-top: 60px; /* Prevents header overlap */
+        }
+
+        .section-button {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .section-button:hover {
+            background-color: #005f73;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
         /* Research Page Layout */
         .container {
             display: flex;
@@ -69,12 +127,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        section {
-            padding: 40px 20px;
-            min-height: 80vh;
-            scroll-margin-top: 60px; /* Prevents header overlap */
-        }
-
         /* Hide Scrollbar */
         ::-webkit-scrollbar {
             display: none;
@@ -84,8 +136,17 @@
 <body>
 
 <header>
-    <h1>My Research</h1>
+    <h1>Welcome to My Portal</h1>
 </header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="services.html">Services</a>
+    <a href="publications.html">Publications</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
 <div class="container">
     <!-- Sidebar Navigation -->
@@ -131,5 +192,9 @@
     });
 </script>
 
+<footer>
+    <p>&copy; 2025 Krishna Kant | All Rights Reserved</p>
+</footer>
+    
 </body>
 </html>
