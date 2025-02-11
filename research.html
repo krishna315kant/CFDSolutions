@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Krishna Kant-Research</title>
+    <title>Research - Dr. Krishna Kant</title>
     <style>
         /* General Styles */
         body {
@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
             background-color: lightblue;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         header {
@@ -25,94 +26,110 @@
             margin: 0;
         }
 
-        /* Navigation Styles */
-        nav {
-            background-color: #444;
+        /* Research Page Layout */
+        .container {
             display: flex;
-            justify-content: center;
-            padding: 10px;
         }
 
-        nav a {
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #444;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            overflow: hidden; /* No scrollbar */
+        }
+
+        .sidebar a {
+            display: block;
             color: white;
             text-decoration: none;
-            padding: 14px 20px;
+            padding: 15px;
+            margin: 10px 0;
             font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
             background-color: #575757;
+            text-align: center;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
-        /* Section Styles */
-        section {
+        .sidebar a:hover {
+            background-color: #008CBA;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 270px;
             padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            background-color: #fff;
+            flex-grow: 1;
+            background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Footer Styles */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        section {
+            padding: 40px 20px;
+            min-height: 80vh;
+            scroll-margin-top: 60px; /* Prevents header overlap */
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Research</h1>
+    <h1>My Research</h1>
 </header>
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="services.html">Services</a>
-    <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="#solver-development">Solver Development</a>
+        <a href="#atomization">Atomization</a>
+        <a href="#flash-boiling">Flash Boiling</a>
+        <a href="#quantum-computing">Quantum Computing</a>
+    </nav>
 
-<section>
-    <h2>My Research Interests</h2>
-    <p>My primary research focuses on computational fluid dynamics (CFD), multiphase flow modeling, and non-equilibrium thermodynamics. Some of the areas I am currently exploring include:</p>
-    
-    <ul>
-        <li><strong>CFD Modeling:</strong> Developing advanced models for simulating fluid flows in various industrial and environmental applications.</li>
-        <li><strong>Multiphase Flow:</strong> Understanding the dynamics of droplets, bubbles, and solid particles in turbulent flows.</li>
-        <li><strong>Thermodynamics:</strong> Exploring non-equilibrium thermodynamic models for applications in heat transfer and combustion.</li>
-    </ul>
+    <!-- Main Research Content -->
+    <div class="content">
+        <section id="solver-development">
+            <h2>Solver Development</h2>
+            <p>Details about numerical solver development for multiphase simulations.</p>
+        </section>
 
-    <h3>Ongoing Projects</h3>
-    <p>Here are some of the current research projects I am working on:</p>
+        <section id="atomization">
+            <h2>Atomization</h2>
+            <p>Exploring atomization models and droplet breakup dynamics.</p>
+        </section>
 
-    <ul>
-        <li><strong>Project Title 1:</strong> Description of the project and its objectives.</li>
-        <li><strong>Project Title 2:</strong> Description of the project and its objectives.</li>
-        <li><strong>Project Title 3:</strong> Description of the project and its objectives.</li>
-    </ul>
-    
-    <h3>Collaborations and Future Directions</h3>
-    <p>I am always looking for opportunities to collaborate with other researchers and institutions. My future research directions include:</p>
+        <section id="flash-boiling">
+            <h2>Flash Boiling</h2>
+            <p>Studying rapid phase transitions in high-temperature environments.</p>
+        </section>
 
-    <ul>
-        <li>Collaborating on multiphase flow simulations with industry partners.</li>
-        <li>Developing new computational tools for simulating non-equilibrium thermodynamics.</li>
-        <li>Exploring the use of machine learning to optimize fluid dynamics simulations.</li>
-    </ul>
-</section>
+        <section id="quantum-computing">
+            <h2>Quantum Computing</h2>
+            <p>Investigating quantum-based modeling for fluid flow simulations.</p>
+        </section>
+    </div>
+</div>
 
-<footer>
-    <p>&copy; 2025 Krishna Kant | All Rights Reserved</p>
-</footer>
+<script>
+    // Smooth scrolling when clicking sidebar links
+    document.querySelectorAll('.sidebar a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
 
 </body>
 </html>
