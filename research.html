@@ -104,19 +104,28 @@
             overflow: hidden; /* No scrollbar */
             display: flex;  /* Ensures flexbox */
             flex-direction: column;  /* Aligns elements vertically */
-            align-items: stretch;  /* Make all buttons full width */
+            align-items: center;  /* Center align everything */
+        }
+
+        /* Research Topics Heading */
+.        sidebar h3 {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .sidebar a {
             display: block;
+            text-align: center;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #008CBA;
             color: white;
             text-decoration: none;
-            font-size: 16px;
-            text-align: center;
             border-radius: 50px;
-            transition: 0.3s;
-            background-color: #008CBA;
-            padding: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             margin-bottom: 10px;
         }
 
@@ -126,10 +135,9 @@
 
         /* Main Content */
         .content {
-            margin-left: 270px;
+            margin-top: 20px;
             padding: 20px;
             flex-grow: 1;
-            background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
