@@ -6,13 +6,16 @@
     <title>Dr. Krishna Kant - Research</title>
     <style>
         /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             background-color: lightblue;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow: hidden; /* Prevents full-page scrolling */
         }
 
         header {
@@ -20,10 +23,6 @@
             color: white;
             text-align: center;
             padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
         }
 
         nav {
@@ -45,71 +44,31 @@
             background-color: #575757;
         }
 
-        section {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            min-height: 80vh;
-            scroll-margin-top: 20px; /* Prevents header overlap */
-        }
-
-        .section-button {
-            background-color: #008CBA;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .section-button:hover {
-            background-color: #005f73;
-            transform: scale(1.05);
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Research Page Layout */
+        /* Layout Container */
         .container {
             display: flex;
-            margin-top: 20px; /* Push content below header */
+            height: calc(100vh - 100px); /* Full viewport height minus header */
+            margin-top: 0px;
         }
 
-        /* Sidebar Styles */
+        /* Sidebar (Fixed Position) */
         .sidebar {
             width: 250px;
             background-color: white;
             padding: 20px;
-            position: relative;
-            height: 450px;
+            position: fixed;
+            top: 100px; /* Below the navigation */
+            left: 20px; /* Add margin from the left */
+            height: calc(100vh - 120px); /* Adjust height dynamically */
             border-radius: 8px;
-            top: 0;
-            left: 0;
-            overflow: hidden; /* No scrollbar */
-            display: flex;  /* Ensures flexbox */
-            flex-direction: column;  /* Aligns elements vertically */
-            align-items: center;  /* Center align everything */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Research Topics Heading */
-.        sidebar h3 {
+        .sidebar h3 {
             text-align: center;
             font-size: 18px;
             font-weight: bold;
@@ -134,18 +93,38 @@
             background-color: #005f73;
         }
 
-        /* Main Content */
+        /* Main Content (Scrollable) */
         .content {
-            margin-top: 0px;
-            padding: 20px;
             flex-grow: 1;
+            margin-left: 290px; /* Ensure it aligns with sidebar */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            height: calc(100vh - 120px); /* Adjust height */
+            overflow-y: auto; /* Scroll only inside the content */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Hide Scrollbar */
-        ::-webkit-scrollbar {
-            display: none;
+        /* Research Sections */
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -167,13 +146,13 @@
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <h3>Research Topics</h3>
-        <a href="#solver-development" class="section-button">Solver Development</a>
-        <a href="#atomization" class="section-button">Atomization</a>
-        <a href="#flash-boiling" class="section-button">Flash Boiling</a>
-        <a href="#quantum-computing" class="section-button">Quantum Computing</a>
+        <a href="#solver-development">Solver Development</a>
+        <a href="#atomization">Atomization</a>
+        <a href="#flash-boiling">Flash Boiling</a>
+        <a href="#quantum-computing">Quantum Computing</a>
     </nav>
 
-    <!-- Main Research Content -->
+    <!-- Main Research Content (Scrollable) -->
     <div class="content">
         <section id="solver-development">
             <h2>Solver Development</h2>
@@ -197,20 +176,9 @@
     </div>
 </div>
 
-<script>
-    // Smooth scrolling when clicking sidebar links
-    document.querySelectorAll('.sidebar a').forEach(anchor => {
-        anchor.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetSection = document.querySelector(this.getAttribute('href'));
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-</script>
-
 <footer>
     <p>&copy; 2025 Krishna Kant | All Rights Reserved</p>
 </footer>
-    
+
 </body>
 </html>
